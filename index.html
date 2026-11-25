@@ -10,7 +10,7 @@
 // 특별부서 코드는 이 파일에 없습니다. 서버가 확인한 결과만 임시로 기억합니다.
 const CODE_CACHE=Object.create(null);
 // 새로운 행사 전용 Google Apps Script /exec 주소만 입력하십시오. 과거 결재 이벤트 API를 재사용하지 마세요.
-const API_URL='https://script.google.com/macros/s/AKfycbznYN7FR9l2fVKl41zCgrqO3yOLZUI87K7ySDpzZZ-YRfYnN05V4g9xGAEdU55Gxtxc/exec';
+const API_URL='https://script.google.com/macros/s/AKfycbxXhIz3uPy1r7ErSQ6XnIGxZcmSaigUZKkhih6czdCwG9-juNKEquL_G2hHlTvXf-TE_w/exec';
 const REG=['전략기획실','특수사업부','기록관리실','크리에이티브팀'];const SP=['종합안내부','환경미화부','보안관리부'];const ALL=[...REG,...SP];
 const $=s=>document.querySelector(s);const els={setup:$('#setup'),game:$('#game'),results:$('#results'),name:$('#playerName'),list:$('#deptList'),start:$('#start'),codeNote:$('#codeNote'),paper:$('#paper'),arena:$('#arena'),time:$('#time'),hits:$('#hits'),errors:$('#errors'),bar:$('#bar'),flash:$('#flash'),who:$('#who'),ranks:$('#regularRanks'),special:$('#specialRanks'),challenge:$('#challenge'),message:$('#saveMessage'),sync:$('#syncNote')};
 const KEY='sajang-sort-records-2026-v1';let records=[];try{records=JSON.parse(localStorage.getItem(KEY)||'[]');if(!Array.isArray(records))records=[]}catch(e){records=[]}
